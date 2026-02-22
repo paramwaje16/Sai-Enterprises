@@ -4,16 +4,27 @@ export const shopInfo = {
   name: "Sai Enterprises",
   tagline: "Lathe Machine Tools | Purchase of Carbide Scrap",
   description: "Your trusted partner for all types of lathe machine tools, M1TR machine, Traub machine tools, carbide scraps, and industrial hardware solutions in Pune.",
-  phone: "098227 64821",
+  phone: "7720953955",
   email: "saienterprisespune@example.com",
   address: "Plot 11/A/2, Indrayani Nagar, S Block, Chowk, Bhosari, Pune, Pimpri-Chinchwad, Maharashtra 411026",
   rating: 4.9,
   totalReviews: 13,
   hours: {
-    weekdays: "9:00 AM - 7:00 PM",
-    saturday: "9:00 AM - 6:00 PM",
-    sunday: "Closed"
+    weekdays: "9:00 AM - 7:30 PM",
+    saturday: "9:00 AM - 7:30 PM",
+    thursday: "Closed",
+    sunday: "9:00 AM - 7:30 PM"
   },
+  directors: [
+    {
+      name: "Aditya Mamidwar",
+      title: "Director"
+    },
+    {
+      name: "Balaji Mamidwar",
+      title: "Director"
+    }
+  ],
   googleMapsLink: "https://www.google.com/maps/place/Sai+Enterprises",
   mapCoordinates: {
     lat: 18.6298,
@@ -78,32 +89,38 @@ export const services = [
     id: 3,
     title: "Traub Machine Tools",
     description: "High-precision Traub machine tools for advanced turning and machining operations.",
-    icon: "Cog",
+    icon: "Cog"
+  },
+  {
+    id: 4,
+    title: "Customised Lathe Machine Tools",
+    description: "Custom-designed lathe machine tools tailored to your specific industrial requirements and applications.",
+    icon: "Settings2",
     subtypes: [
       {
-        name: "Swiss-Type Tools",
-        description: "Specialized tools for Traub Swiss-type automatic lathes"
+        name: "Custom Turning Tools",
+        description: "Specially designed turning tools for unique machining requirements"
       },
       {
-        name: "Form Tools",
-        description: "Custom form tools for complex Traub machining operations"
+        name: "Special Profile Tools",
+        description: "Custom profile tools manufactured to your exact specifications"
       },
       {
-        name: "Carbide Inserts",
-        description: "Premium carbide inserts specifically designed for Traub machines"
+        name: "Modified Standard Tools",
+        description: "Standard tools modified to meet specific application needs"
       },
       {
-        name: "Collets & Bushings",
-        description: "Precision collets and guide bushings for Traub applications"
+        name: "Prototype Tool Development",
+        description: "Development and testing of new tool designs for specialized applications"
       },
       {
-        name: "Drills & Reamers",
-        description: "High-precision drills and reamers compatible with Traub machines"
+        name: "Application-Specific Solutions",
+        description: "Complete tooling solutions designed for specific production challenges"
       }
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Milling Inserts",
     description: "Wide selection of milling inserts for various machining operations and material types.",
     icon: "CircleDot",
@@ -131,7 +148,7 @@ export const services = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "Brazing Services",
     description: "Expert brazing services using Brass, Copper, and Silver for durable metal joining solutions.",
     icon: "Flame",
@@ -159,7 +176,7 @@ export const services = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Carbide Scrap Purchase",
     description: "We purchase all types of carbide scraps at competitive prices. Contact us for best rates.",
     icon: "Recycle",
@@ -187,7 +204,7 @@ export const services = [
     ]
   },
   {
-    id: 7,
+    id: 8,
     title: "Forging & Punch Heading",
     description: "Professional forging and punch heading services for custom industrial requirements.",
     icon: "Hammer",
