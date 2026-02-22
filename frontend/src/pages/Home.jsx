@@ -433,7 +433,8 @@ const Home = () => {
               <h4 className="text-lg font-semibold mb-4">Our Services</h4>
               <ul className="space-y-2 text-slate-400">
                 <li>Lathe Machine Tools</li>
-                <li>MOTR Tools</li>
+                <li>M1TR Machine</li>
+                <li>Traub Machine Tools</li>
                 <li>Milling Inserts</li>
                 <li>Brazing Services</li>
                 <li>Carbide Scrap Purchase</li>
