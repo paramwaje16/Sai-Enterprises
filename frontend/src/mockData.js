@@ -65,25 +65,7 @@ export const services = [
     id: 2,
     title: "M1TR Machine",
     description: "Premium M1TR machine tools designed for professional industrial applications with superior performance.",
-    icon: "Wrench",
-    subtypes: [
-      {
-        name: "Indexable Inserts",
-        description: "High-performance indexable inserts for M1TR machines with extended tool life"
-      },
-      {
-        name: "Tool Holders",
-        description: "Precision tool holders compatible with M1TR machine specifications"
-      },
-      {
-        name: "Cutting Blades",
-        description: "Specialized cutting blades designed for M1TR machine operations"
-      },
-      {
-        name: "Accessories",
-        description: "Complete range of M1TR machine accessories and spare parts"
-      }
-    ]
+    icon: "Wrench"
   },
   {
     id: 3,
@@ -207,29 +189,7 @@ export const services = [
     id: 8,
     title: "Forging & Punch Heading",
     description: "Professional forging and punch heading services for custom industrial requirements.",
-    icon: "Hammer",
-    subtypes: [
-      {
-        name: "Cold Forging",
-        description: "Precision cold forging for high-strength metal components"
-      },
-      {
-        name: "Hot Forging",
-        description: "High-temperature forging for large and complex metal parts"
-      },
-      {
-        name: "Punch Dies",
-        description: "Custom punch dies for various stamping and forming operations"
-      },
-      {
-        name: "Header Dies",
-        description: "Specialized header dies for fastener and bolt production"
-      },
-      {
-        name: "Die Repair & Maintenance",
-        description: "Expert repair and maintenance services for forging and punch dies"
-      }
-    ]
+    icon: "Hammer"
   }
 ];
 
