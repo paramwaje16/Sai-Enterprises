@@ -3,7 +3,7 @@
 export const shopInfo = {
   name: "Sai Enterprises",
   tagline: "Lathe Machine Tools | Purchase of Carbide Scrap",
-  description: "Your trusted partner for all types of lathe machine tools, carbide scraps, and industrial hardware solutions in Pune.",
+  description: "Your trusted partner for all types of lathe machine tools, M1TR machine, Traub machine tools, carbide scraps, and industrial hardware solutions in Pune.",
   phone: "098227 64821",
   email: "saienterprisespune@example.com",
   address: "Plot 11/A/2, Indrayani Nagar, S Block, Chowk, Bhosari, Pune, Pimpri-Chinchwad, Maharashtra 411026",
@@ -30,30 +30,36 @@ export const services = [
   },
   {
     id: 2,
-    title: "MOTR Tools",
-    description: "Premium MOTR tools designed for professional industrial applications with superior performance.",
+    title: "M1TR Machine",
+    description: "Premium M1TR machine tools designed for professional industrial applications with superior performance.",
     icon: "Wrench"
   },
   {
     id: 3,
+    title: "Traub Machine Tools",
+    description: "High-precision Traub machine tools for advanced turning and machining operations.",
+    icon: "Cog"
+  },
+  {
+    id: 4,
     title: "Milling Inserts",
     description: "Wide selection of milling inserts for various machining operations and material types.",
     icon: "CircleDot"
   },
   {
-    id: 4,
+    id: 5,
     title: "Brazing Services",
     description: "Expert brazing services using Brass, Copper, and Silver for durable metal joining solutions.",
     icon: "Flame"
   },
   {
-    id: 5,
+    id: 6,
     title: "Carbide Scrap Purchase",
     description: "We purchase all types of carbide scraps at competitive prices. Contact us for best rates.",
     icon: "Recycle"
   },
   {
-    id: 6,
+    id: 7,
     title: "Forging & Punch Heading",
     description: "Professional forging and punch heading services for custom industrial requirements.",
     icon: "Hammer"
