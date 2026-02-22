@@ -26,43 +26,193 @@ export const services = [
     id: 1,
     title: "Lathe Machine Tools",
     description: "Complete range of high-quality lathe machine tools for precision machining and manufacturing needs.",
-    icon: "Settings"
+    icon: "Settings",
+    subtypes: [
+      {
+        name: "Turning Tools",
+        description: "Precision turning tools for external and internal operations, including roughing and finishing"
+      },
+      {
+        name: "Boring Tools",
+        description: "High-accuracy boring tools for enlarging and finishing internal surfaces"
+      },
+      {
+        name: "Threading Tools",
+        description: "Specialized threading tools for creating internal and external threads with precision"
+      },
+      {
+        name: "Grooving Tools",
+        description: "Groove cutting tools for face grooving, external and internal grooving operations"
+      },
+      {
+        name: "Parting Tools",
+        description: "Heavy-duty parting and cut-off tools for separating workpieces"
+      }
+    ]
   },
   {
     id: 2,
     title: "M1TR Machine",
     description: "Premium M1TR machine tools designed for professional industrial applications with superior performance.",
-    icon: "Wrench"
+    icon: "Wrench",
+    subtypes: [
+      {
+        name: "Indexable Inserts",
+        description: "High-performance indexable inserts for M1TR machines with extended tool life"
+      },
+      {
+        name: "Tool Holders",
+        description: "Precision tool holders compatible with M1TR machine specifications"
+      },
+      {
+        name: "Cutting Blades",
+        description: "Specialized cutting blades designed for M1TR machine operations"
+      },
+      {
+        name: "Accessories",
+        description: "Complete range of M1TR machine accessories and spare parts"
+      }
+    ]
   },
   {
     id: 3,
     title: "Traub Machine Tools",
     description: "High-precision Traub machine tools for advanced turning and machining operations.",
-    icon: "Cog"
+    icon: "Cog",
+    subtypes: [
+      {
+        name: "Swiss-Type Tools",
+        description: "Specialized tools for Traub Swiss-type automatic lathes"
+      },
+      {
+        name: "Form Tools",
+        description: "Custom form tools for complex Traub machining operations"
+      },
+      {
+        name: "Carbide Inserts",
+        description: "Premium carbide inserts specifically designed for Traub machines"
+      },
+      {
+        name: "Collets & Bushings",
+        description: "Precision collets and guide bushings for Traub applications"
+      },
+      {
+        name: "Drills & Reamers",
+        description: "High-precision drills and reamers compatible with Traub machines"
+      }
+    ]
   },
   {
     id: 4,
     title: "Milling Inserts",
     description: "Wide selection of milling inserts for various machining operations and material types.",
-    icon: "CircleDot"
+    icon: "CircleDot",
+    subtypes: [
+      {
+        name: "Face Milling Inserts",
+        description: "Robust inserts for face milling operations on large flat surfaces"
+      },
+      {
+        name: "Shoulder Milling Inserts",
+        description: "High-performance inserts for shoulder milling and square shoulder operations"
+      },
+      {
+        name: "End Mill Inserts",
+        description: "Versatile indexable end mill inserts for profiling and slotting"
+      },
+      {
+        name: "Slot Milling Inserts",
+        description: "Specialized inserts for slot milling and groove cutting applications"
+      },
+      {
+        name: "High Feed Inserts",
+        description: "Advanced inserts optimized for high-speed and high-feed milling"
+      }
+    ]
   },
   {
     id: 5,
     title: "Brazing Services",
     description: "Expert brazing services using Brass, Copper, and Silver for durable metal joining solutions.",
-    icon: "Flame"
+    icon: "Flame",
+    subtypes: [
+      {
+        name: "Brass Brazing",
+        description: "Strong and economical brass brazing for general purpose metal joining"
+      },
+      {
+        name: "Copper Brazing",
+        description: "High thermal conductivity copper brazing for heat-sensitive applications"
+      },
+      {
+        name: "Silver Brazing",
+        description: "Premium silver brazing for superior strength and corrosion resistance"
+      },
+      {
+        name: "Carbide Tip Brazing",
+        description: "Precision brazing of carbide tips to tool shanks for cutting applications"
+      },
+      {
+        name: "Custom Brazing",
+        description: "Customized brazing solutions for specialized industrial requirements"
+      }
+    ]
   },
   {
     id: 6,
     title: "Carbide Scrap Purchase",
     description: "We purchase all types of carbide scraps at competitive prices. Contact us for best rates.",
-    icon: "Recycle"
+    icon: "Recycle",
+    subtypes: [
+      {
+        name: "Solid Carbide Scrap",
+        description: "Purchase of solid carbide end mills, drills, and cutting tools"
+      },
+      {
+        name: "Carbide Insert Scrap",
+        description: "Competitive rates for used and broken carbide inserts"
+      },
+      {
+        name: "Brazed Carbide Scrap",
+        description: "Purchase of brazed carbide tools and tips"
+      },
+      {
+        name: "Carbide Sludge",
+        description: "Collection and purchase of carbide grinding sludge and powder"
+      },
+      {
+        name: "Mixed Carbide Scrap",
+        description: "We accept mixed carbide scrap lots at fair market prices"
+      }
+    ]
   },
   {
     id: 7,
     title: "Forging & Punch Heading",
     description: "Professional forging and punch heading services for custom industrial requirements.",
-    icon: "Hammer"
+    icon: "Hammer",
+    subtypes: [
+      {
+        name: "Cold Forging",
+        description: "Precision cold forging for high-strength metal components"
+      },
+      {
+        name: "Hot Forging",
+        description: "High-temperature forging for large and complex metal parts"
+      },
+      {
+        name: "Punch Dies",
+        description: "Custom punch dies for various stamping and forming operations"
+      },
+      {
+        name: "Header Dies",
+        description: "Specialized header dies for fastener and bolt production"
+      },
+      {
+        name: "Die Repair & Maintenance",
+        description: "Expert repair and maintenance services for forging and punch dies"
+      }
+    ]
   }
 ];
 
