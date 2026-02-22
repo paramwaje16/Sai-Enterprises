@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Star, Clock, Send, Menu, X } from 'lucide-react';
+import { Phone, Mail, MapPin, Star, Clock, Send, Menu, X, ChevronDown } from 'lucide-react';
 import * as Icons from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Badge } from '../components/ui/badge';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '../components/ui/accordion';
 import { toast } from 'sonner';
 import { shopInfo, services, products, reviews, categories } from '../mockData';
 
@@ -153,15 +159,32 @@ const Home = () => {
             {services.map((service) => {
               const IconComponent = Icons[service.icon] || Icons.Settings;
               return (
-                <Card key={service.id} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-slate-200">
+                <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-slate-200">
                   <CardHeader>
                     <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                       <IconComponent className="text-blue-600" size={28} />
                     </div>
                     <CardTitle className="text-xl text-slate-900">{service.title}</CardTitle>
+                    <CardDescription className="text-slate-600 text-base">{service.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-slate-600 text-base">{service.description}</CardDescription>
+                    <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="subtypes" className="border-slate-200">
+                        <AccordionTrigger className="text-blue-600 hover:text-blue-700 font-semibold text-sm py-2">
+                          View Types ({service.subtypes.length})
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <div className="space-y-3 pt-2">
+                            {service.subtypes.map((subtype, index) => (
+                              <div key={index} className="border-l-2 border-blue-200 pl-3 py-1">
+                                <h4 className="font-semibold text-slate-800 text-sm">{subtype.name}</h4>
+                                <p className="text-xs text-slate-600 mt-1">{subtype.description}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+                    </Accordion>
                   </CardContent>
                 </Card>
               );
