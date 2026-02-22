@@ -168,23 +168,36 @@ const Home = () => {
                     <CardDescription className="text-slate-600 text-base">{service.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Accordion type="single" collapsible className="w-full">
-                      <AccordionItem value="subtypes" className="border-slate-200">
-                        <AccordionTrigger className="text-blue-600 hover:text-blue-700 font-semibold text-sm py-2">
-                          View Types ({service.subtypes.length})
-                        </AccordionTrigger>
-                        <AccordionContent>
-                          <div className="space-y-3 pt-2">
-                            {service.subtypes.map((subtype, index) => (
-                              <div key={index} className="border-l-2 border-blue-200 pl-3 py-1">
-                                <h4 className="font-semibold text-slate-800 text-sm">{subtype.name}</h4>
-                                <p className="text-xs text-slate-600 mt-1">{subtype.description}</p>
-                              </div>
-                            ))}
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
+                    {service.subtypes && service.subtypes.length > 0 ? (
+                      <Accordion type="single" collapsible className="w-full">
+                        <AccordionItem value="subtypes" className="border-slate-200">
+                          <AccordionTrigger className="text-blue-600 hover:text-blue-700 font-semibold text-sm py-2">
+                            View Types ({service.subtypes.length})
+                          </AccordionTrigger>
+                          <AccordionContent>
+                            <div className="space-y-3 pt-2">
+                              {service.subtypes.map((subtype, index) => (
+                                <div key={index} className="border-l-2 border-blue-200 pl-3 py-1">
+                                  <h4 className="font-semibold text-slate-800 text-sm">{subtype.name}</h4>
+                                  <p className="text-xs text-slate-600 mt-1">{subtype.description}</p>
+                                </div>
+                              ))}
+                            </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    ) : (
+                      <div className="text-center py-2">
+                        <Button 
+                          onClick={() => scrollToSection('contact')} 
+                          variant="outline" 
+                          size="sm"
+                          className="w-full border-blue-600 text-blue-600 hover:bg-blue-50"
+                        >
+                          Contact for Details
+                        </Button>
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );
@@ -397,9 +410,8 @@ const Home = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-1">Business Hours</h3>
-                      <p className="text-slate-600">Mon-Fri: {shopInfo.hours.weekdays}</p>
-                      <p className="text-slate-600">Sat: {shopInfo.hours.saturday}</p>
-                      <p className="text-slate-600">Sun: {shopInfo.hours.sunday}</p>
+                      <p className="text-slate-600">Mon-Wed, Fri-Sun: {shopInfo.hours.weekdays}</p>
+                      <p className="text-slate-600">Thu: {shopInfo.hours.thursday}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -427,17 +439,23 @@ const Home = () => {
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div className="md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">{shopInfo.name}</h3>
               <p className="text-slate-400 mb-4">{shopInfo.tagline}</p>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="text-yellow-500 fill-yellow-500" size={16} />
                   ))}
                 </div>
                 <span className="text-slate-400">({shopInfo.totalReviews} reviews)</span>
+              </div>
+              <div className="mt-4">
+                <h4 className="text-sm font-semibold mb-2 text-slate-300">Directors</h4>
+                {shopInfo.directors.map((director, index) => (
+                  <p key={index} className="text-slate-400 text-sm">{director.name} - {director.title}</p>
+                ))}
               </div>
             </div>
             
@@ -454,14 +472,14 @@ const Home = () => {
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-              <ul className="space-y-2 text-slate-400">
+              <ul className="space-y-2 text-slate-400 text-sm">
                 <li>Lathe Machine Tools</li>
                 <li>M1TR Machine</li>
                 <li>Traub Machine Tools</li>
+                <li>Customised Lathe Tools</li>
                 <li>Milling Inserts</li>
                 <li>Brazing Services</li>
                 <li>Carbide Scrap Purchase</li>
-                <li>Forging & Punch Heading</li>
               </ul>
             </div>
           </div>
