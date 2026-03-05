@@ -31,10 +31,31 @@ const Home = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast.success('Inquiry submitted successfully! We will contact you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    
+    try {
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${BACKEND_URL}/api/inquiries`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Failed to submit inquiry');
+      }
+
+      const data = await response.json();
+      toast.success('Inquiry submitted successfully! We will contact you soon.');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting inquiry:', error);
+      toast.error(error.message || 'Failed to submit inquiry. Please try again.');
+    }
   };
 
   const scrollToSection = (sectionId) => {

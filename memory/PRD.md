@@ -3,68 +3,118 @@
 ## Original Problem Statement
 Build a website for Sai Enterprises hardware shop using information from Google Maps.
 
-## Shop Information (from Google Maps)
+## Shop Information
 - **Name:** Sai Enterprises
 - **Specialty:** Lathe Machine Tools | Purchase of Carbide Scrap
-- **Location:** Plot 11/A/2, Indrayani Nagar, S Block, Chowk, Bhosari, Pune, Pimpri-Chinchwad, Maharashtra 411026
-- **Phone:** 098227 64821
+- **Location:** Plot 11/A/2, Indrayani Nagar, S Block, Chowk, Bhosari, Pune, Maharashtra 411026
+- **Phone:** 7720953955 (Aditya), 9822764821 (Balaji)
+- **Email:** adityamamidwar00@gmail.com
 - **Rating:** 4.9/5 (13 Google reviews)
-- **Services:** Lathe machine tools, MOTR tools, Milling inserts, Brazing Inserts, Forging, Brazing (Brass, Copper, Silver), Punch Heading, Carbide scraps
+- **Directors:** Aditya Mamidwar, Balaji Mamidwar
 
 ## Architecture
 - **Frontend:** React with Shadcn UI components
-- **Backend:** FastAPI (to be implemented)
-- **Database:** MongoDB (to be implemented)
+- **Backend:** FastAPI
+- **Database:** MongoDB
 
-## User Personas
-1. **Industrial Buyers** - Looking for lathe machine tools and industrial hardware
-2. **Workshop Owners** - Need reliable suppliers for carbide tools and brazing services
-3. **Carbide Scrap Sellers** - Want to sell carbide scraps at competitive prices
+## Implemented Features (Frontend - Mock Data)
+✅ Hero section with CTAs
+✅ 8 Services (4 with subtypes, 4 without)
+✅ Products section with 6 products
+✅ Reviews section (6 reviews)
+✅ Contact form with map integration
+✅ WhatsApp floating button
+✅ SEO optimization
+✅ Fully responsive design
 
-## Core Requirements
-- Professional hardware shop website
-- Service showcase
-- Product catalog
-- Customer reviews display
-- Contact form and information
-- Google Maps integration
-- Mobile responsive design
+## Backend API Contract
 
-## What's Been Implemented (Dec 19, 2024)
-### Frontend (Mock Version) ✅
-- Hero section with CTAs
-- Services section (6 services)
-- Products section with categories
-- Reviews section (actual Google reviews)
-- Contact section with form and map
-- WhatsApp floating button
-- Fully responsive design
-- Professional industrial color scheme
-- Smooth navigation and animations
+### Contact Form Endpoint
 
-### Mock Data Created ✅
-- Shop information
-- 6 services
-- 6 featured products
-- 5 customer reviews
-- Product categories
+**POST /api/inquiries**
 
-## Next Tasks (Prioritized Backlog)
+Request Body:
+```json
+{
+  "name": "string (required)",
+  "email": "string (required, email format)",
+  "phone": "string (optional)",
+  "message": "string (required)"
+}
+```
 
-### P0 - Backend Development
-1. Create inquiry/contact form API endpoint
-2. Store inquiries in MongoDB
-3. Email notification for new inquiries
+Response (Success - 201):
+```json
+{
+  "id": "string",
+  "name": "string",
+  "email": "string",
+  "phone": "string",
+  "message": "string",
+  "status": "pending",
+  "created_at": "datetime",
+  "updated_at": "datetime"
+}
+```
 
-### P1 - Enhanced Features
-1. Product catalog management
-2. Admin panel for managing products/services
-3. Photo gallery
-4. WhatsApp integration for direct messaging
+Response (Error - 400):
+```json
+{
+  "detail": "Error message"
+}
+```
 
-### P2 - Nice to Have
-1. Online quote request system
-2. Product search functionality
-3. Customer testimonials submission
-4. Blog/news section
-5. SEO optimization
+### Get All Inquiries (Optional - Admin)
+
+**GET /api/inquiries**
+
+Response (200):
+```json
+[
+  {
+    "id": "string",
+    "name": "string",
+    "email": "string",
+    "phone": "string",
+    "message": "string",
+    "status": "pending | contacted | resolved",
+    "created_at": "datetime",
+    "updated_at": "datetime"
+  }
+]
+```
+
+## MongoDB Schema
+
+### Inquiry Collection
+```
+{
+  _id: ObjectId,
+  inquiry_id: String (UUID),
+  name: String,
+  email: String,
+  phone: String (optional),
+  message: String,
+  status: String (pending, contacted, resolved),
+  created_at: DateTime,
+  updated_at: DateTime
+}
+```
+
+## Frontend Integration
+- Remove mock toast success
+- Call POST /api/inquiries on form submit
+- Show success/error messages based on API response
+- Clear form on successful submission
+
+## Testing Requirements
+- Test contact form submission
+- Verify data is stored in MongoDB
+- Test form validation
+- Test error handling
+
+## Future Enhancements (P1)
+- Email notification on new inquiry
+- Admin panel to view/manage inquiries
+- Product catalog management
+- Photo gallery
