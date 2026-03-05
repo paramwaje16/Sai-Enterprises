@@ -167,8 +167,8 @@ const Home = () => {
                     <CardTitle className="text-xl text-slate-900">{service.title}</CardTitle>
                     <CardDescription className="text-slate-600 text-base">{service.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    {service.subtypes && service.subtypes.length > 0 ? (
+                  {service.subtypes && service.subtypes.length > 0 && (
+                    <CardContent>
                       <Accordion type="single" collapsible className="w-full">
                         <AccordionItem value="subtypes" className="border-slate-200">
                           <AccordionTrigger className="text-blue-600 hover:text-blue-700 font-semibold text-sm py-2">
@@ -186,19 +186,8 @@ const Home = () => {
                           </AccordionContent>
                         </AccordionItem>
                       </Accordion>
-                    ) : (
-                      <div className="text-center py-2">
-                        <Button 
-                          onClick={() => scrollToSection('contact')} 
-                          variant="outline" 
-                          size="sm"
-                          className="w-full border-blue-600 text-blue-600 hover:bg-blue-50"
-                        >
-                          Contact for Details
-                        </Button>
-                      </div>
-                    )}
-                  </CardContent>
+                    </CardContent>
+                  )}
                 </Card>
               );
             })}
@@ -390,8 +379,14 @@ const Home = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-1">Phone</h3>
-                      <a href={`tel:${shopInfo.phone}`} className="text-blue-600 hover:underline block">{shopInfo.phone}</a>
-                      <a href={`tel:${shopInfo.phone2}`} className="text-blue-600 hover:underline block">{shopInfo.phone2}</a>
+                      <div className="mb-2">
+                        <a href={`tel:${shopInfo.phone}`} className="text-blue-600 hover:underline block font-medium">{shopInfo.phone}</a>
+                        <span className="text-slate-500 text-sm">({shopInfo.phoneName})</span>
+                      </div>
+                      <div>
+                        <a href={`tel:${shopInfo.phone2}`} className="text-blue-600 hover:underline block font-medium">{shopInfo.phone2}</a>
+                        <span className="text-slate-500 text-sm">({shopInfo.phone2Name})</span>
+                      </div>
                     </div>
                   </div>
                   
@@ -475,7 +470,7 @@ const Home = () => {
               <h4 className="text-lg font-semibold mb-4">Our Services</h4>
               <ul className="space-y-2 text-slate-400 text-sm">
                 <li>Lathe Machine Tools</li>
-                <li>M1TR Machine</li>
+                <li>Milling Machine Tools</li>
                 <li>Traub Machine Tools</li>
                 <li>Customised Lathe Tools</li>
                 <li>Milling Inserts</li>

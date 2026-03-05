@@ -5,7 +5,9 @@ export const shopInfo = {
   tagline: "Lathe Machine Tools | Purchase of Carbide Scrap",
   description: "Your trusted partner for all types of lathe machine tools, M1TR machine, Traub machine tools, carbide scraps, and industrial hardware solutions in Pune.",
   phone: "7720953955",
+  phoneName: "Aditya",
   phone2: "9822764821",
+  phone2Name: "Balaji",
   email: "adityamamidwar00@gmail.com",
   address: "Plot 11/A/2, Indrayani Nagar, S Block, Chowk, Bhosari, Pune, Pimpri-Chinchwad, Maharashtra 411026",
   rating: 4.9,
@@ -64,8 +66,8 @@ export const services = [
   },
   {
     id: 2,
-    title: "M1TR Machine",
-    description: "Premium M1TR machine tools designed for professional industrial applications with superior performance.",
+    title: "Milling Machine Tools",
+    description: "Premium milling machine tools designed for professional industrial applications with superior performance.",
     icon: "Wrench"
   },
   {
