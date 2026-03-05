@@ -390,7 +390,8 @@ const Home = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-1">Phone</h3>
-                      <a href={`tel:${shopInfo.phone}`} className="text-blue-600 hover:underline">{shopInfo.phone}</a>
+                      <a href={`tel:${shopInfo.phone}`} className="text-blue-600 hover:underline block">{shopInfo.phone}</a>
+                      <a href={`tel:${shopInfo.phone2}`} className="text-blue-600 hover:underline block">{shopInfo.phone2}</a>
                     </div>
                   </div>
                   

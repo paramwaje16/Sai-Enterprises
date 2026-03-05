@@ -5,7 +5,8 @@ export const shopInfo = {
   tagline: "Lathe Machine Tools | Purchase of Carbide Scrap",
   description: "Your trusted partner for all types of lathe machine tools, M1TR machine, Traub machine tools, carbide scraps, and industrial hardware solutions in Pune.",
   phone: "7720953955",
-  email: "saienterprisespune@example.com",
+  phone2: "9822764821",
+  email: "adityamamidwar00@gmail.com",
   address: "Plot 11/A/2, Indrayani Nagar, S Block, Chowk, Bhosari, Pune, Pimpri-Chinchwad, Maharashtra 411026",
   rating: 4.9,
   totalReviews: 13,
@@ -105,29 +106,7 @@ export const services = [
     id: 5,
     title: "Milling Inserts",
     description: "Wide selection of milling inserts for various machining operations and material types.",
-    icon: "CircleDot",
-    subtypes: [
-      {
-        name: "Face Milling Inserts",
-        description: "Robust inserts for face milling operations on large flat surfaces"
-      },
-      {
-        name: "Shoulder Milling Inserts",
-        description: "High-performance inserts for shoulder milling and square shoulder operations"
-      },
-      {
-        name: "End Mill Inserts",
-        description: "Versatile indexable end mill inserts for profiling and slotting"
-      },
-      {
-        name: "Slot Milling Inserts",
-        description: "Specialized inserts for slot milling and groove cutting applications"
-      },
-      {
-        name: "High Feed Inserts",
-        description: "Advanced inserts optimized for high-speed and high-feed milling"
-      }
-    ]
+    icon: "CircleDot"
   },
   {
     id: 6,
