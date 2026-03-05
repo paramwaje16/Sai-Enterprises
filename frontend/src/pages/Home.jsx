@@ -379,14 +379,12 @@ const Home = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-1">Phone</h3>
-                      <div className="mb-2">
-                        <a href={`tel:${shopInfo.phone}`} className="text-blue-600 hover:underline block font-medium">{shopInfo.phone}</a>
-                        <span className="text-slate-500 text-sm">({shopInfo.phoneName})</span>
-                      </div>
-                      <div>
-                        <a href={`tel:${shopInfo.phone2}`} className="text-blue-600 hover:underline block font-medium">{shopInfo.phone2}</a>
-                        <span className="text-slate-500 text-sm">({shopInfo.phone2Name})</span>
-                      </div>
+                      <a href={`tel:${shopInfo.phone}`} className="text-blue-600 hover:underline block">
+                        {shopInfo.phone} - {shopInfo.phoneName}
+                      </a>
+                      <a href={`tel:${shopInfo.phone2}`} className="text-blue-600 hover:underline block mt-1">
+                        {shopInfo.phone2} - {shopInfo.phone2Name}
+                      </a>
                     </div>
                   </div>
                   

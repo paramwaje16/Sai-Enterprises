@@ -254,6 +254,13 @@ export const reviews = [
     rating: 4,
     comment: "Good collection of tools. Staff is knowledgeable and helpful.",
     date: "2 months ago"
+  },
+  {
+    id: 6,
+    name: "Prashant Deshmukh",
+    rating: 5,
+    comment: "Best quality carbide tools at competitive rates. Highly recommended for industrial use.",
+    date: "3 weeks ago"
   }
 ];
 
