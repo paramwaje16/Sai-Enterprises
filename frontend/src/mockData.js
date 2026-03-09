@@ -13,10 +13,10 @@ export const shopInfo = {
   rating: 4.9,
   totalReviews: 13,
   hours: {
-    weekdays: "9:00 AM - 7:30 PM",
-    saturday: "9:00 AM - 7:30 PM",
+    weekdays: "9:30 AM - 7:30 PM",
+    saturday: "9:30 AM - 7:30 PM",
     thursday: "Closed",
-    sunday: "9:00 AM - 7:30 PM"
+    sunday: "9:30 AM - 7:30 PM"
   },
   directors: [
     {
