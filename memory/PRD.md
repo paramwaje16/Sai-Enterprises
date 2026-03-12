@@ -150,9 +150,31 @@ Response (200):
 - Verified contact form API still working end-to-end
 
 ### Pending:
-- P1: Product Management System (admin upload/edit/delete products)
-- P2: Migrate product data from mock.js to MongoDB
 - P2: Replace Google Drive image URLs with reliable hosting
+
+---
+
+## WhatsApp Quick Inquiry + Product Management (March 12, 2026)
+
+### Completed:
+- WhatsApp Quick Inquiry: Product buttons now open WhatsApp with pre-filled details
+- Product Management System: Full CRUD API + Admin page at /admin/products
+- Home page fetches products dynamically from API (with mockData fallback)
+- Fixed React key warnings for API-sourced products
+
+### New API Endpoints:
+1. GET /api/products - List all products
+2. POST /api/products - Create new product
+3. PUT /api/products/{product_id} - Update product
+4. DELETE /api/products/{product_id} - Delete product
+5. GET /api/products/categories/list - Category counts
+6. POST /api/products/seed - Seed initial data
+
+### Database:
+- Collection: products
+- Fields: product_id, name, category, image, created_at, updated_at
+
+### Testing: 14/14 backend + all frontend passed (/app/test_reports/iteration_2.json)
 
 ### API Endpoints:
 1. POST /api/inquiries - Create new inquiry

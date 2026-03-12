@@ -265,7 +265,7 @@ const Home = () => {
                     <AccordionContent>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Turning").map((product) => (
-                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <Card key={product.product_id || product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                             <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
@@ -293,7 +293,7 @@ const Home = () => {
                     <AccordionContent>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Boring").map((product) => (
-                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <Card key={product.product_id || product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                             <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
@@ -321,7 +321,7 @@ const Home = () => {
                     <AccordionContent>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Threading").map((product) => (
-                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <Card key={product.product_id || product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                             <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
@@ -349,7 +349,7 @@ const Home = () => {
                     <AccordionContent>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Facing").map((product) => (
-                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <Card key={product.product_id || product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                             <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
@@ -377,7 +377,7 @@ const Home = () => {
                     <AccordionContent>
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Parting").map((product) => (
-                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                          <Card key={product.product_id || product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                             <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
@@ -412,7 +412,7 @@ const Home = () => {
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {products.filter(p => p.category === "Milling Tools").map((product) => (
-                    <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <Card key={product.product_id || product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                         <img 
                           src={product.image} 
@@ -444,7 +444,7 @@ const Home = () => {
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {products.filter(p => p.category === "Traub Tools").slice(0, 5).map((product) => (
-                    <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <Card key={product.product_id || product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                         <img 
                           src={product.image} 
@@ -476,7 +476,7 @@ const Home = () => {
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {products.filter(p => p.category === "Carbide Scrap").slice(0, 4).map((product) => (
-                    <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                    <Card key={product.product_id || product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
                       <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                         <img 
                           src={product.image} 
