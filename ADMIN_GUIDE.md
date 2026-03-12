@@ -9,7 +9,7 @@ https://your-website.com/admin
 
 For development/preview:
 ```
-https://local-hardware-guide.preview.emergentagent.com/admin
+https://sai-hardware-shop.preview.emergentagent.com/admin
 ```
 
 ---

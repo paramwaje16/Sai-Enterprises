@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 
 class SaiEnterprisesAPITester:
-    def __init__(self, base_url="https://local-hardware-guide.preview.emergentagent.com"):
+    def __init__(self, base_url="https://sai-hardware-shop.preview.emergentagent.com"):
         self.base_url = base_url
         self.tests_run = 0
         self.tests_passed = 0

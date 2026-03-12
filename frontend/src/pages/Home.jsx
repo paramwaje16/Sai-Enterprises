@@ -592,60 +592,63 @@ const Home = () => {
             </Card>
 
             {/* Contact Information */}
-            <div className="space-y-6">
-              <Card className="shadow-lg">
-                <CardContent className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="text-blue-600" size={24} />
+            <div className="flex flex-col gap-4">
+              {/* Info Cards Grid - 2x2 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Address Card */}
+                <Card className="shadow-lg" data-testid="contact-address-card">
+                  <CardContent className="p-5 flex flex-col items-center text-center h-full justify-center">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                      <MapPin className="text-blue-600" size={22} />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Address</h3>
-                      <p className="text-slate-600">{shopInfo.address}</p>
+                    <h3 className="font-semibold text-slate-900 mb-1 text-sm">Address</h3>
+                    <p className="text-slate-600 text-xs leading-relaxed">{shopInfo.address}</p>
+                  </CardContent>
+                </Card>
+
+                {/* Phone Card */}
+                <Card className="shadow-lg" data-testid="contact-phone-card">
+                  <CardContent className="p-5 flex flex-col items-center text-center h-full justify-center">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                      <Phone className="text-green-600" size={22} />
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="text-green-600" size={24} />
+                    <h3 className="font-semibold text-slate-900 mb-1 text-sm">Phone</h3>
+                    <a href={`tel:${shopInfo.phone}`} className="text-blue-600 hover:underline block text-xs">
+                      {shopInfo.phone} - {shopInfo.phoneName}
+                    </a>
+                    <a href={`tel:${shopInfo.phone2}`} className="text-blue-600 hover:underline block mt-0.5 text-xs">
+                      {shopInfo.phone2} - {shopInfo.phone2Name}
+                    </a>
+                  </CardContent>
+                </Card>
+
+                {/* Email Card */}
+                <Card className="shadow-lg" data-testid="contact-email-card">
+                  <CardContent className="p-5 flex flex-col items-center text-center h-full justify-center">
+                    <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-3">
+                      <Mail className="text-orange-600" size={22} />
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Phone</h3>
-                      <a href={`tel:${shopInfo.phone}`} className="text-blue-600 hover:underline block">
-                        {shopInfo.phone} - {shopInfo.phoneName}
-                      </a>
-                      <a href={`tel:${shopInfo.phone2}`} className="text-blue-600 hover:underline block mt-1">
-                        {shopInfo.phone2} - {shopInfo.phone2Name}
-                      </a>
+                    <h3 className="font-semibold text-slate-900 mb-1 text-sm">Email</h3>
+                    <a href={`mailto:${shopInfo.email}`} className="text-blue-600 hover:underline text-xs break-all">{shopInfo.email}</a>
+                  </CardContent>
+                </Card>
+
+                {/* Business Hours Card */}
+                <Card className="shadow-lg" data-testid="contact-hours-card">
+                  <CardContent className="p-5 flex flex-col items-center text-center h-full justify-center">
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-3">
+                      <Clock className="text-purple-600" size={22} />
                     </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="text-orange-600" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
-                      <a href={`mailto:${shopInfo.email}`} className="text-blue-600 hover:underline">{shopInfo.email}</a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="text-purple-600" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Business Hours</h3>
-                      <p className="text-slate-600">Mon-Wed, Fri-Sun: {shopInfo.hours.weekdays}</p>
-                      <p className="text-slate-600">Thu: {shopInfo.hours.thursday}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    <h3 className="font-semibold text-slate-900 mb-1 text-sm">Business Hours</h3>
+                    <p className="text-slate-600 text-xs">Mon-Wed, Fri-Sun: {shopInfo.hours.weekdays}</p>
+                    <p className="text-slate-600 text-xs">Thu: {shopInfo.hours.thursday}</p>
+                  </CardContent>
+                </Card>
+              </div>
 
               {/* Map */}
-              <Card className="shadow-lg overflow-hidden">
-                <div className="h-64 bg-slate-200">
+              <Card className="shadow-lg overflow-hidden" data-testid="contact-map">
+                <div className="h-52 bg-slate-200">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.2766728832157!2d73.84580431490063!3d18.629800287342856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9ea83eba0dd%3A0x4e24aae87f3ef86!2sSai%20Enterprises%20%7C%20Lathe%20Machine%20Tools%20%7C%20Purchase%20of%20Carbide%20Scrap!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                     width="100%"
@@ -667,13 +670,8 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <img src="/logo.png" alt="Sai Enterprises Logo" className="h-16 w-auto" />
-                <div>
-                  <h3 className="text-2xl font-bold">{shopInfo.name}</h3>
-                  <p className="text-slate-400">{shopInfo.tagline}</p>
-                </div>
-              </div>
+              <h3 className="text-2xl font-bold mb-4">{shopInfo.name}</h3>
+              <p className="text-slate-400 mb-4">{shopInfo.tagline}</p>
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
