@@ -72,9 +72,12 @@ const Home = () => {
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-slate-800">{shopInfo.name}</h1>
-              <p className="text-sm text-slate-600">{shopInfo.tagline}</p>
+            <div className="flex items-center gap-4">
+              <img src="/logo.png" alt="Sai Enterprises Logo" className="h-12 w-auto" />
+              <div>
+                <h1 className="text-2xl md:text-3xl font-bold text-slate-800">{shopInfo.name}</h1>
+                <p className="text-sm text-slate-600">{shopInfo.tagline}</p>
+              </div>
             </div>
             
             {/* Desktop Navigation */}
@@ -664,8 +667,13 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="md:col-span-2">
-              <h3 className="text-2xl font-bold mb-4">{shopInfo.name}</h3>
-              <p className="text-slate-400 mb-4">{shopInfo.tagline}</p>
+              <div className="flex items-center gap-3 mb-4">
+                <img src="/logo.png" alt="Sai Enterprises Logo" className="h-16 w-auto" />
+                <div>
+                  <h3 className="text-2xl font-bold">{shopInfo.name}</h3>
+                  <p className="text-slate-400">{shopInfo.tagline}</p>
+                </div>
+              </div>
               <div className="flex items-center gap-2 mb-4">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
