@@ -226,39 +226,286 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Categories */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {categories.map((category) => (
-              <Badge key={category.id} variant="outline" className="px-4 py-2 text-sm border-slate-300 hover:bg-blue-50 hover:border-blue-400 cursor-pointer transition-colors">
-                {category.name} ({category.count})
-              </Badge>
-            ))}
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="h-48 overflow-hidden bg-slate-200">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
+          {/* Product Categories with Subfolders */}
+          <div className="space-y-6">
+            {/* Lathe Machine Tools - Main Category with Subfolders */}
+            <Card className="overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-blue-50 to-slate-50 border-b border-slate-200">
+                <CardTitle className="text-2xl text-slate-900 flex items-center gap-2">
+                  <Icons.Settings className="text-blue-600" size={28} />
+                  Lathe Machine Tools
+                </CardTitle>
+                <CardDescription className="text-base">Complete range of lathe tools organized by type</CardDescription>
+              </CardHeader>
+              <CardContent className="p-6">
+                <Accordion type="single" collapsible className="w-full">
+                  {/* Turning Tools Subfolder */}
+                  <AccordionItem value="turning" className="border-slate-200">
+                    <AccordionTrigger className="text-lg font-semibold text-slate-800 hover:text-blue-600">
+                      Turning Tools ({products.filter(p => p.category === "Lathe Tools - Turning").length})
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                        {products.filter(p => p.category === "Lathe Tools - Turning").map((product) => (
+                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                            <div className="h-48 overflow-hidden bg-slate-200">
+                              <img 
+                                src={product.image} 
+                                alt={product.name}
+                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                              />
+                            </div>
+                            <CardHeader>
+                              <CardTitle className="text-lg">{product.name}</CardTitle>
+                              <CardDescription className="text-sm">{product.description}</CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                              <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
+                                Inquiry Now
+                              </Button>
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  {/* Boring Tools Subfolder */}
+                  <AccordionItem value="boring" className="border-slate-200">
+                    <AccordionTrigger className="text-lg font-semibold text-slate-800 hover:text-blue-600">
+                      Boring Tools ({products.filter(p => p.category === "Lathe Tools - Boring").length})
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                        {products.filter(p => p.category === "Lathe Tools - Boring").map((product) => (
+                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                            <div className="h-48 overflow-hidden bg-slate-200">
+                              <img 
+                                src={product.image} 
+                                alt={product.name}
+                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                              />
+                            </div>
+                            <CardHeader>
+                              <CardTitle className="text-lg">{product.name}</CardTitle>
+                              <CardDescription className="text-sm">{product.description}</CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                              <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
+                                Inquiry Now
+                              </Button>
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  {/* Threading Tools Subfolder */}
+                  <AccordionItem value="threading" className="border-slate-200">
+                    <AccordionTrigger className="text-lg font-semibold text-slate-800 hover:text-blue-600">
+                      Threading Tools ({products.filter(p => p.category === "Lathe Tools - Threading").length})
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                        {products.filter(p => p.category === "Lathe Tools - Threading").map((product) => (
+                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                            <div className="h-48 overflow-hidden bg-slate-200">
+                              <img 
+                                src={product.image} 
+                                alt={product.name}
+                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                              />
+                            </div>
+                            <CardHeader>
+                              <CardTitle className="text-lg">{product.name}</CardTitle>
+                              <CardDescription className="text-sm">{product.description}</CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                              <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
+                                Inquiry Now
+                              </Button>
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  {/* Facing Tools Subfolder */}
+                  <AccordionItem value="facing" className="border-slate-200">
+                    <AccordionTrigger className="text-lg font-semibold text-slate-800 hover:text-blue-600">
+                      Facing Tools ({products.filter(p => p.category === "Lathe Tools - Facing").length})
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                        {products.filter(p => p.category === "Lathe Tools - Facing").map((product) => (
+                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                            <div className="h-48 overflow-hidden bg-slate-200">
+                              <img 
+                                src={product.image} 
+                                alt={product.name}
+                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                              />
+                            </div>
+                            <CardHeader>
+                              <CardTitle className="text-lg">{product.name}</CardTitle>
+                              <CardDescription className="text-sm">{product.description}</CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                              <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
+                                Inquiry Now
+                              </Button>
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  {/* Parting Tools Subfolder */}
+                  <AccordionItem value="parting" className="border-slate-200">
+                    <AccordionTrigger className="text-lg font-semibold text-slate-800 hover:text-blue-600">
+                      Parting Tools ({products.filter(p => p.category === "Lathe Tools - Parting").length})
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                        {products.filter(p => p.category === "Lathe Tools - Parting").map((product) => (
+                          <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                            <div className="h-48 overflow-hidden bg-slate-200">
+                              <img 
+                                src={product.image} 
+                                alt={product.name}
+                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                              />
+                            </div>
+                            <CardHeader>
+                              <CardTitle className="text-lg">{product.name}</CardTitle>
+                              <CardDescription className="text-sm">{product.description}</CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                              <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
+                                Inquiry Now
+                              </Button>
+                            </CardContent>
+                          </Card>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </CardContent>
+            </Card>
+
+            {/* Milling Machine Tools - Main Category */}
+            <Card className="overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-orange-50 to-slate-50 border-b border-slate-200">
+                <CardTitle className="text-2xl text-slate-900 flex items-center gap-2">
+                  <Icons.Wrench className="text-orange-600" size={28} />
+                  Milling Machine Tools
+                </CardTitle>
+                <CardDescription className="text-base">Premium milling tools for precision machining</CardDescription>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {products.filter(p => p.category === "Milling Tools").map((product) => (
+                    <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="h-48 overflow-hidden bg-slate-200">
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <CardHeader>
+                        <CardTitle className="text-lg">{product.name}</CardTitle>
+                        <CardDescription className="text-sm">{product.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
+                          Inquiry Now
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
-                <CardHeader>
-                  <div className="flex justify-between items-start mb-2">
-                    <Badge variant="secondary" className="bg-blue-100 text-blue-700">{product.category}</Badge>
+              </CardContent>
+            </Card>
+
+            {/* Traub Machine Tools - Main Category */}
+            <Card className="overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-purple-50 to-slate-50 border-b border-slate-200">
+                <CardTitle className="text-2xl text-slate-900 flex items-center gap-2">
+                  <Icons.Cog className="text-purple-600" size={28} />
+                  Traub Machine Tools
+                </CardTitle>
+                <CardDescription className="text-base">High-precision Traub tools for advanced operations</CardDescription>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {products.filter(p => p.category === "Traub Tools").slice(0, 5).map((product) => (
+                    <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="h-48 overflow-hidden bg-slate-200">
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <CardHeader>
+                        <CardTitle className="text-lg">{product.name}</CardTitle>
+                        <CardDescription className="text-sm">{product.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
+                          Inquiry Now
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Carbide Scrap - Main Category */}
+            <Card className="overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-green-50 to-slate-50 border-b border-slate-200">
+                <CardTitle className="text-2xl text-slate-900 flex items-center gap-2">
+                  <Icons.Recycle className="text-green-600" size={28} />
+                  Carbide Scrap Purchase
+                </CardTitle>
+                <CardDescription className="text-base">We purchase all types of carbide scraps at competitive prices</CardDescription>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {products.filter(p => p.category === "Carbide Scrap").slice(0, 4).map((product) => (
+                    <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="h-48 overflow-hidden bg-slate-200">
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                        />
+                      </div>
+                      <CardHeader>
+                        <CardTitle className="text-lg">{product.name}</CardTitle>
+                        <CardDescription className="text-sm">{product.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
+                          Inquiry Now
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+                {products.filter(p => p.category === "Carbide Scrap").length > 4 && (
+                  <div className="mt-4 text-center">
+                    <p className="text-slate-600 text-sm">+{products.filter(p => p.category === "Carbide Scrap").length - 4} more grades available</p>
                   </div>
-                  <CardTitle className="text-xl text-slate-900">{product.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-slate-600">{product.description}</CardDescription>
-                  <Button className="w-full mt-4 bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
-                    Inquiry Now
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                )}
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
