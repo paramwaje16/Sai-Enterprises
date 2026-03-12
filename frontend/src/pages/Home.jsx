@@ -497,6 +497,19 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {reviews.map((review) => (
               <Card key={review.id} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <CardTitle className="text-lg text-slate-900">{review.name}</CardTitle>
+                      <p className="text-sm text-slate-500">{review.date}</p>
+                    </div>
+                    <div className="flex">
+                      {[...Array(review.rating)].map((_, i) => (
+                        <Star key={i} className="text-yellow-500 fill-yellow-500" size={16} />
+                      ))}
+                    </div>
+                  </div>
+                </CardHeader>
                 <CardContent>
                   <p className="text-slate-700 italic">"{review.comment}"</p>
                 </CardContent>
