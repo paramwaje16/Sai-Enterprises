@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Mail, Phone, Calendar, User, MessageSquare, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Mail, Phone, Calendar, User, MessageSquare, RefreshCw, Package } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
@@ -92,6 +92,15 @@ const Admin = () => {
                 <p className="text-slate-600">Sai Enterprises - Customer Inquiries</p>
               </div>
             </div>
+            <Button
+              onClick={() => navigate('/admin/products')}
+              variant="outline"
+              className="border-slate-300"
+              data-testid="manage-products-btn"
+            >
+              <Package className="mr-2" size={20} />
+              Manage Products
+            </Button>
             <Button
               onClick={fetchInquiries}
               disabled={refreshing}

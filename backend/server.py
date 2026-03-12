@@ -10,6 +10,7 @@ from typing import List
 import uuid
 from datetime import datetime, timezone
 from routes.inquiries import router as inquiries_router
+from routes.products import router as products_router
 
 
 ROOT_DIR = Path(__file__).parent
@@ -69,6 +70,7 @@ async def get_status_checks():
 
 # Include inquiry routes
 api_router.include_router(inquiries_router, tags=["inquiries"])
+api_router.include_router(products_router, tags=["products"])
 
 # Include the router in the main app
 app.include_router(api_router)
