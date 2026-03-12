@@ -257,7 +257,6 @@ const Home = () => {
                             </div>
                             <CardHeader>
                               <CardTitle className="text-lg">{product.name}</CardTitle>
-                              <CardDescription className="text-sm">{product.description}</CardDescription>
                             </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
@@ -288,7 +287,6 @@ const Home = () => {
                             </div>
                             <CardHeader>
                               <CardTitle className="text-lg">{product.name}</CardTitle>
-                              <CardDescription className="text-sm">{product.description}</CardDescription>
                             </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
@@ -319,7 +317,6 @@ const Home = () => {
                             </div>
                             <CardHeader>
                               <CardTitle className="text-lg">{product.name}</CardTitle>
-                              <CardDescription className="text-sm">{product.description}</CardDescription>
                             </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
@@ -350,7 +347,6 @@ const Home = () => {
                             </div>
                             <CardHeader>
                               <CardTitle className="text-lg">{product.name}</CardTitle>
-                              <CardDescription className="text-sm">{product.description}</CardDescription>
                             </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
@@ -381,7 +377,6 @@ const Home = () => {
                             </div>
                             <CardHeader>
                               <CardTitle className="text-lg">{product.name}</CardTitle>
-                              <CardDescription className="text-sm">{product.description}</CardDescription>
                             </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
@@ -419,7 +414,6 @@ const Home = () => {
                       </div>
                       <CardHeader>
                         <CardTitle className="text-lg">{product.name}</CardTitle>
-                        <CardDescription className="text-sm">{product.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
@@ -454,7 +448,6 @@ const Home = () => {
                       </div>
                       <CardHeader>
                         <CardTitle className="text-lg">{product.name}</CardTitle>
-                        <CardDescription className="text-sm">{product.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
@@ -489,7 +482,6 @@ const Home = () => {
                       </div>
                       <CardHeader>
                         <CardTitle className="text-lg">{product.name}</CardTitle>
-                        <CardDescription className="text-sm">{product.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
                         <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
