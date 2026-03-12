@@ -3,7 +3,7 @@
 export const shopInfo = {
   name: "Sai Enterprises",
   tagline: "Lathe Machine Tools | Purchase of Carbide Scrap",
-  description: "Your trusted partner for all types of lathe machine tools, M1TR machine, Traub machine tools, carbide scraps, and industrial hardware solutions in Pune.",
+  description: "Your trusted partner for all types of lathe machine tools, milling machine tools, Traub machine tools, carbide scraps, and industrial hardware solutions in Pune.",
   phone: "7720953955",
   phoneName: "Aditya",
   phone2: "9822764821",
