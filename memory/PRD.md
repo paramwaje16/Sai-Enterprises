@@ -176,6 +176,14 @@ Response (200):
 
 ### Testing: 14/14 backend + all frontend passed (/app/test_reports/iteration_2.json)
 
+---
+
+## UI Adjustments (March 12, 2026)
+
+### Completed:
+- Lathe Machine Tools products now displayed directly (removed accordion dropdowns) with sub-category headings (Turning, Boring, Threading, Facing, Parting)
+- Header logo enlarged and adjusted for better visibility (h-12 mobile / h-16 desktop, auto width)
+
 ### API Endpoints:
 1. POST /api/inquiries - Create new inquiry
 2. GET /api/inquiries - List all inquiries
