@@ -185,24 +185,21 @@ export const products = [
     name: "Carbide Turning Tool - Type 1",
     category: "Lathe Tools - Turning",
     description: "Precision carbide turning tool for external operations",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    driveImage: "IMG_9261-Photoroom.jpg" // Replace with your Google Drive link
+    image: "https://drive.google.com/uc?export=view&id=1--MJJQZ5SRclwWBv7wLHIWR0VWzyCyS-"
   },
   {
     id: 2,
     name: "Carbide Turning Tool - Type 2",
     category: "Lathe Tools - Turning",
     description: "High-performance turning tool for rough and finish operations",
-    image: "https://images.unsplash.com/photo-1581092918484-8313e1f9a5d5?w=800&q=80",
-    driveImage: "IMG_9262-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1L6Jov4MgV211N0rZF6Wof11ownCD8fma"
   },
   {
     id: 3,
     name: "Carbide Turning Tool - Type 3",
     category: "Lathe Tools - Turning",
     description: "Premium quality carbide turning insert tool",
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&q=80",
-    driveImage: "IMG_9263-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=199m47GYBVyg5igZKnaua0kQ440lCTq0C"
   },
   
   // Lathe Machine Tools - Boring Tools (2 products)
@@ -211,16 +208,14 @@ export const products = [
     name: "Precision Boring Tool - Type 1",
     category: "Lathe Tools - Boring",
     description: "High-accuracy boring tool for internal surfaces",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-    driveImage: "IMG_9269-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1pY4NPwCumn0wRZVgqn8gdReg5Nhiw-jq"
   },
   {
     id: 5,
     name: "Precision Boring Tool - Type 2",
     category: "Lathe Tools - Boring",
     description: "Advanced boring tool for enlarging holes",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    driveImage: "IMG_9270-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1O_eJDKfqwJFNCSnVLh5ZIg0A9qyi50K_"
   },
   
   // Lathe Machine Tools - Threading Tools (4 products)
@@ -229,32 +224,28 @@ export const products = [
     name: "Threading Tool - Type 1",
     category: "Lathe Tools - Threading",
     description: "Specialized threading tool for internal and external threads",
-    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=80",
-    driveImage: "IMG_9264-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1mqRAXstcxgdJ4H8V6T2qYy3tJFQKhG2u"
   },
   {
     id: 7,
     name: "Threading Tool - Type 2",
     category: "Lathe Tools - Threading",
     description: "Precision thread cutting tool for various thread profiles",
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&q=80",
-    driveImage: "IMG_9265-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1_SzcJDyQmfOVG4AhImFUHB_4rZWtlF6j"
   },
   {
     id: 8,
     name: "Threading Tool - Type 3",
     category: "Lathe Tools - Threading",
     description: "Multi-purpose threading insert tool",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    driveImage: "IMG_9266-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1-WqHyp26wnbCZqdH8AsSPGTZYRG19fuI"
   },
   {
     id: 9,
     name: "Threading Tool - Type 4",
     category: "Lathe Tools - Threading",
     description: "Heavy-duty threading tool for industrial applications",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-    driveImage: "IMG_9268-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1bTow9SnxVkasSBYEhGFy-0EcudvmSknI"
   },
   
   // Lathe Machine Tools - Facing Tools (3 products)
@@ -263,24 +254,21 @@ export const products = [
     name: "Facing Tool - Type 1",
     category: "Lathe Tools - Facing",
     description: "Precision facing tool for creating flat surfaces",
-    image: "https://images.unsplash.com/photo-1581092918484-8313e1f9a5d5?w=800&q=80",
-    driveImage: "IMG_9272-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1FOxou30teSQ91M7devazhld4_BZCdBcA"
   },
   {
     id: 11,
     name: "Facing Tool - Type 2",
     category: "Lathe Tools - Facing",
     description: "High-performance facing insert tool",
-    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=80",
-    driveImage: "IMG_9273-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1k0vvpEragEJ8GIa2Fk_lCquzZYc7flOS"
   },
   {
     id: 12,
     name: "Facing Tool - Type 3",
     category: "Lathe Tools - Facing",
     description: "Advanced facing tool for perpendicular surfaces",
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&q=80",
-    driveImage: "IMG_9274-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1zddA8xbAfAmRSdzdeQBkkGi7OasGaGPF"
   },
   
   // Lathe Machine Tools - Parting Tools (3 products)
@@ -289,24 +277,21 @@ export const products = [
     name: "Parting Tool - Type 1",
     category: "Lathe Tools - Parting",
     description: "Heavy-duty parting tool for cut-off operations",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    driveImage: "IMG_9275-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1gEJ78iCk4pG0MiZzngrZr5_Jq_8JCwRN"
   },
   {
     id: 14,
     name: "Parting Tool - Type 2",
     category: "Lathe Tools - Parting",
     description: "Precision parting and grooving tool",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-    driveImage: "IMG_9276-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1VNj_ube67jwdEf9yPgzzE0n4OyfoIHVM"
   },
   {
     id: 15,
     name: "Parting Tool - Type 3",
     category: "Lathe Tools - Parting",
     description: "Industrial-grade parting tool for workpiece separation",
-    image: "https://images.unsplash.com/photo-1581092918484-8313e1f9a5d5?w=800&q=80",
-    driveImage: "IMG_9277-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=19dkNfUTU7LxWychI0ykK7HzKxqU90XNc"
   },
   
   // Milling Machine Tools (4 products)
@@ -315,32 +300,28 @@ export const products = [
     name: "Milling Insert - Type 1",
     category: "Milling Tools",
     description: "Premium milling insert for face milling operations",
-    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=80",
-    driveImage: "IMG_9278-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1wY7jUV5V-dKjBiSjpqZAXr4No0g-4-A0"
   },
   {
     id: 17,
     name: "Milling Insert - Type 2",
     category: "Milling Tools",
     description: "High-performance milling tool for precision machining",
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&q=80",
-    driveImage: "IMG_9279-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1mowmmn3hLhFZkty6rEt7M5KGQ_H4NaBN"
   },
   {
     id: 18,
     name: "Milling Insert - Type 3",
     category: "Milling Tools",
     description: "Versatile milling insert for various materials",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    driveImage: "IMG_9280-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1P0N5FHBpEf1XBNjS_emn2Nnk8OM8tmP2"
   },
   {
     id: 19,
     name: "Milling Insert - Type 4",
     category: "Milling Tools",
     description: "Industrial milling tool for heavy-duty operations",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-    driveImage: "IMG_9281-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1e_J6i58zXN4Xj1Ti-V4DfqHfQkH6DI3E"
   },
   
   // Traub Machine Tools (5 products)
@@ -349,40 +330,35 @@ export const products = [
     name: "Traub Machine Tool - Type 1",
     category: "Traub Tools",
     description: "High-precision Traub tool for advanced turning operations",
-    image: "https://images.unsplash.com/photo-1581092918484-8313e1f9a5d5?w=800&q=80",
-    driveImage: "IMG_9282-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1gIyD95dHdLU7KPZlYJA3NolMD-us494U"
   },
   {
     id: 21,
     name: "Traub Machine Tool - Type 2",
     category: "Traub Tools",
     description: "Specialized Traub insert for Swiss-type lathes",
-    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=80",
-    driveImage: "IMG_9283-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1aLVdLpYS-PV6rMRb-p3xfXQ6pM4VJcWj"
   },
   {
     id: 22,
     name: "Traub Machine Tool - Type 3",
     category: "Traub Tools",
     description: "Premium Traub tool for complex machining",
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&q=80",
-    driveImage: "IMG_9284-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1khUuZFDp24Lf9yhQAl5OodhxivQRAh5i"
   },
   {
     id: 23,
     name: "Traub Machine Tool - Type 4",
     category: "Traub Tools",
     description: "Advanced Traub cutting tool for precision work",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    driveImage: "IMG_9285-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1Ib8PYKpTrfeecqPWVxQVbDHFbvpjUHeq"
   },
   {
     id: 24,
     name: "Traub Machine Tool - Type 5",
     category: "Traub Tools",
     description: "Professional-grade Traub tool for industrial use",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-    driveImage: "IMG_9286-Photoroom.jpg"
+    image: "https://drive.google.com/uc?export=view&id=1laaH75FnhQdDggeS75yZ7yaPbXc43TNq"
   },
   
   // Carbide Scrap (7 products)
@@ -391,56 +367,49 @@ export const products = [
     name: "Carbide Scrap - Grade 1",
     category: "Carbide Scrap",
     description: "Premium quality carbide scrap - competitive rates",
-    image: "https://images.unsplash.com/photo-1581092918484-8313e1f9a5d5?w=800&q=80",
-    driveImage: "IMG_9226.JPG"
+    image: "https://drive.google.com/uc?export=view&id=16DR18Rf6YDIXoWNSu2sOXgIKeIjDx-Sa"
   },
   {
     id: 26,
     name: "Carbide Scrap - Grade 2",
     category: "Carbide Scrap",
     description: "Industrial carbide scrap collection and purchase",
-    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=80",
-    driveImage: "IMG_9287.JPG"
+    image: "https://drive.google.com/uc?export=view&id=1Qx9cHr5sozq3p-hDInAwB_jF_qhllej4"
   },
   {
     id: 27,
     name: "Carbide Scrap - Grade 3",
     category: "Carbide Scrap",
     description: "High-value carbide scrap - best prices offered",
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&q=80",
-    driveImage: "IMG_9288.JPG"
+    image: "https://drive.google.com/uc?export=view&id=170sklk04ZphL5Ew__Uv8hd8ZkVkSHPRE"
   },
   {
     id: 28,
     name: "Carbide Scrap - Grade 4",
     category: "Carbide Scrap",
     description: "Mixed carbide scrap purchase service",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-    driveImage: "IMG_9289.JPG"
+    image: "https://drive.google.com/uc?export=view&id=1msxpzGYI-_5PVSpSX5Px-asDqoCad_6P"
   },
   {
     id: 29,
     name: "Carbide Scrap - Grade 5",
     category: "Carbide Scrap",
     description: "Carbide insert scrap - immediate purchase",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-    driveImage: "IMG_9290.JPG"
+    image: "https://drive.google.com/uc?export=view&id=1TQ9VahQclSOVRn7NvFt660n-uHtCQJYo"
   },
   {
     id: 30,
     name: "Carbide Scrap - Grade 6",
     category: "Carbide Scrap",
     description: "Solid carbide scrap - fair market rates",
-    image: "https://images.unsplash.com/photo-1581092918484-8313e1f9a5d5?w=800&q=80",
-    driveImage: "IMG_9291.JPG"
+    image: "https://drive.google.com/uc?export=view&id=1SAeY0J87UodRxkKilqWiZleb71KSXhjC"
   },
   {
     id: 31,
     name: "Carbide Scrap - Grade 7",
     category: "Carbide Scrap",
     description: "Carbide sludge and powder purchase",
-    image: "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=80",
-    driveImage: "IMG_9304.JPG"
+    image: "https://drive.google.com/uc?export=view&id=12ZNKRyh79WPFe_t03fhTTa49hBsuavU3"
   }
 ];
 
