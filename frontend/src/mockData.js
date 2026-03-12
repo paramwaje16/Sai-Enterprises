@@ -61,6 +61,10 @@ export const services = [
       {
         name: "Parting Tools",
         description: "Heavy-duty parting and cut-off tools for separating workpieces"
+      },
+      {
+        name: "Facing Tools",
+        description: "Precision facing tools for creating flat surfaces perpendicular to the workpiece axis"
       }
     ]
   },
