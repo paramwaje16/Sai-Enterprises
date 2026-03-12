@@ -181,6 +181,13 @@ const Home = () => {
               const IconComponent = Icons[service.icon] || Icons.Settings;
               return (
                 <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-slate-200">
+                  <CardHeader>
+                    <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                      <IconComponent className="text-blue-600" size={28} />
+                    </div>
+                    <CardTitle className="text-xl text-slate-900">{service.title}</CardTitle>
+                    <CardDescription className="text-slate-600 text-base">{service.description}</CardDescription>
+                  </CardHeader>
                   {service.subtypes && service.subtypes.length > 0 && (
                     <CardContent>
                       <Accordion type="single" collapsible className="w-full">
