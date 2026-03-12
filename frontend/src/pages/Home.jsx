@@ -181,13 +181,6 @@ const Home = () => {
               const IconComponent = Icons[service.icon] || Icons.Settings;
               return (
                 <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-slate-200">
-                  <CardHeader>
-                    <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                      <IconComponent className="text-blue-600" size={28} />
-                    </div>
-                    <CardTitle className="text-xl text-slate-900">{service.title}</CardTitle>
-                    <CardDescription className="text-slate-600 text-base">{service.description}</CardDescription>
-                  </CardHeader>
                   {service.subtypes && service.subtypes.length > 0 && (
                     <CardContent>
                       <Accordion type="single" collapsible className="w-full">
@@ -248,16 +241,13 @@ const Home = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Turning").map((product) => (
                           <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-48 overflow-hidden bg-slate-200">
+                            <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
                                 alt={product.name}
-                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                                className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                               />
                             </div>
-                            <CardHeader>
-                              <CardTitle className="text-lg">{product.name}</CardTitle>
-                            </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
                                 Inquiry Now
@@ -278,16 +268,13 @@ const Home = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Boring").map((product) => (
                           <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-48 overflow-hidden bg-slate-200">
+                            <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
                                 alt={product.name}
-                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                                className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                               />
                             </div>
-                            <CardHeader>
-                              <CardTitle className="text-lg">{product.name}</CardTitle>
-                            </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
                                 Inquiry Now
@@ -308,16 +295,13 @@ const Home = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Threading").map((product) => (
                           <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-48 overflow-hidden bg-slate-200">
+                            <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
                                 alt={product.name}
-                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                                className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                               />
                             </div>
-                            <CardHeader>
-                              <CardTitle className="text-lg">{product.name}</CardTitle>
-                            </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
                                 Inquiry Now
@@ -338,16 +322,13 @@ const Home = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Facing").map((product) => (
                           <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-48 overflow-hidden bg-slate-200">
+                            <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
                                 alt={product.name}
-                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                                className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                               />
                             </div>
-                            <CardHeader>
-                              <CardTitle className="text-lg">{product.name}</CardTitle>
-                            </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
                                 Inquiry Now
@@ -368,16 +349,13 @@ const Home = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
                         {products.filter(p => p.category === "Lathe Tools - Parting").map((product) => (
                           <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                            <div className="h-48 overflow-hidden bg-slate-200">
+                            <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                               <img 
                                 src={product.image} 
                                 alt={product.name}
-                                className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                                className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                               />
                             </div>
-                            <CardHeader>
-                              <CardTitle className="text-lg">{product.name}</CardTitle>
-                            </CardHeader>
                             <CardContent>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
                                 Inquiry Now
@@ -405,16 +383,13 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {products.filter(p => p.category === "Milling Tools").map((product) => (
                     <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                      <div className="h-48 overflow-hidden bg-slate-200">
+                      <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                          className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      <CardHeader>
-                        <CardTitle className="text-lg">{product.name}</CardTitle>
-                      </CardHeader>
                       <CardContent>
                         <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
                           Inquiry Now
@@ -439,16 +414,13 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {products.filter(p => p.category === "Traub Tools").slice(0, 5).map((product) => (
                     <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                      <div className="h-48 overflow-hidden bg-slate-200">
+                      <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                          className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      <CardHeader>
-                        <CardTitle className="text-lg">{product.name}</CardTitle>
-                      </CardHeader>
                       <CardContent>
                         <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
                           Inquiry Now
@@ -473,16 +445,13 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {products.filter(p => p.category === "Carbide Scrap").slice(0, 4).map((product) => (
                     <Card key={product.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                      <div className="h-48 overflow-hidden bg-slate-200">
+                      <div className="h-64 overflow-hidden bg-slate-200 flex items-center justify-center">
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                          className="w-full h-full object-contain hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      <CardHeader>
-                        <CardTitle className="text-lg">{product.name}</CardTitle>
-                      </CardHeader>
                       <CardContent>
                         <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={() => scrollToSection('contact')}>
                           Inquiry Now
@@ -521,19 +490,6 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {reviews.map((review) => (
               <Card key={review.id} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <CardTitle className="text-lg text-slate-900">{review.name}</CardTitle>
-                      <p className="text-sm text-slate-500">{review.date}</p>
-                    </div>
-                    <div className="flex">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <Star key={i} className="text-yellow-500 fill-yellow-500" size={16} />
-                      ))}
-                    </div>
-                  </div>
-                </CardHeader>
                 <CardContent>
                   <p className="text-slate-700 italic">"{review.comment}"</p>
                 </CardContent>
@@ -556,10 +512,6 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Contact Form */}
             <Card className="shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-2xl text-slate-900">Send us a message</CardTitle>
-                <CardDescription>Fill out the form below and we'll get back to you shortly</CardDescription>
-              </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
@@ -619,9 +571,6 @@ const Home = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               <Card className="shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl text-slate-900">Contact Information</CardTitle>
-                </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
